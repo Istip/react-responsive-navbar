@@ -1,3 +1,3 @@
-### Getting Started with Create React App
+### React Responsive Navbar
 
 Simple responsive navbar created with **React**
