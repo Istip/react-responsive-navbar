@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import {
   Nav,
   NavLink,
@@ -6,16 +6,19 @@ import {
   NavBtn,
   NavBtnLink,
   NavMenu,
+  MobileMenu,
 } from "./NavbarElements"
 
 const Navbar = () => {
+  const [menu, showMenu] = useState(false)
+
   return (
     <>
       <Nav>
         <NavLink to='/'>
           <h1>Logo</h1>
         </NavLink>
-        <Bars />
+        <Bars onClick={() => showMenu(!menu)} />
         <NavMenu>
           <NavLink to='/about' activeStyle>
             About
@@ -34,6 +37,25 @@ const Navbar = () => {
           </NavBtn>
         </NavMenu>
       </Nav>
+      {menu && (
+        <MobileMenu>
+          <h1>
+            <a href='/'>About</a>
+          </h1>
+          <h1>
+            <a href='/'>Services</a>
+          </h1>
+          <h1>
+            <a href='/'>Contact Us</a>
+          </h1>
+          <h1>
+            <a href='/'>Sign Up</a>
+          </h1>
+          <h1>
+            <a href='/'>Sign In</a>
+          </h1>
+        </MobileMenu>
+      )}
     </>
   )
 }

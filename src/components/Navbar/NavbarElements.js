@@ -81,3 +81,29 @@ export const NavBtnLink = styled(Link)`
     color: #010606;
   }
 `
+
+export const MobileMenu = styled.div`
+  background: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 0;
+
+  & h1 {
+    margin: 0 auto;
+  }
+
+  & a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+    padding: 0 5rem;
+
+    &:hover {
+      color: #15cdfc;
+    }
+  }
+`
